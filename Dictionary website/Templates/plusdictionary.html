@@ -1,0 +1,21 @@
+{% extends 'main.html' %}
+
+{% block container %}
+
+<h1> {{ title }} </h1>
+
+           {% if is_real_word %}
+           <h2>{{ word }} is a real word!!</h2>
+           {% endif %}
+
+        {{count}} words with prefix {{word}}!
+
+        <ul>
+            {% for i in list %}
+               <li>
+                <a href="{{url_for('dictionary', word=i)}}">{{i}}</a>
+            </li>
+            {% endfor %}
+        </ul>
+
+{% endblock %}

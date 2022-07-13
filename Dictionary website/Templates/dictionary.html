@@ -1,0 +1,16 @@
+{% extends 'main.html' %}
+
+{% block container %}
+
+<h1> {{ title }} </h1>
+<p> {{ text }} </p>
+
+        <ul>
+            {% for i in list %}
+               <li>
+                <a href="{{url_for('dictionary', word=i)}}">{{i}}</a>
+            </li>
+            {% endfor %}
+        </ul>
+
+{% endblock %}
